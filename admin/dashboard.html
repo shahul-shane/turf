@@ -1,0 +1,831 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Sidebar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div class="menu-btn"><i class="ph-bold ph-caret-left"></i></div>
+      <div class="head">
+        <div class="user-img"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTUzMjAyMTh8&ixlib=rb-4.0.3&q=85" alt=""></div>
+        <div class="user-details">
+          <p class="title">Location</p>
+          <a href="#" class="name">Turf Name</a>
+        </div>
+      </div>
+      <div class="nav">
+        <div class="menu">
+          <p class="title">Main</p>
+          <ul>
+            <li class="active"><a href="#" data-target="dashboard"><i class="icon ph-bold ph-house-simple"></i><span class="text">Dashboard</span></a></li>
+            <li><a href="#" data-target="agenda"><i class="icon ph-bold ph-calendar-blank"></i><span class="text">Agenda</span></a></li>
+            <li><a href="#" data-target="turf-bookings"><i class="icon ph-bold ph-chart-bar"></i><span class="text">Revenue</span></a></li>
+            <li><a href="#" data-target="add-turf"><i class="icon ph-bold ph-user-list"></i><span class="text">Add Turf</span></a></li>
+            <li><a href="#" data-target="turf-profile"><i class="icon ph-bold ph-user"></i><span class="text">Profile</span></a></li>
+          </ul>
+        </div>
+        <!----<div class="menu">
+          <p class="title">Settings</p>
+          <ul>
+            <li><a href="#" data-target="settings"><i class="icon ph-bold ph-gear"></i><span class="text">Settings</span></a></li>
+          </ul>
+        </div>-->
+        <div class="menu">
+          <p class="title">Account</p>
+          <ul>
+            <li><a href="#" data-target="faq"><i class="icon ph-bold ph-info"></i><span class="text">FAQ</span></a></li>
+            <li><a href="#"><i class="icon ph-bold ph-sign-out"></i><span class="text">Logout</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="section dashboard active">
+        <div class="message-box">
+            <div class="message-img">
+              <img src="../assets/WhatsApp Image 2024-07-10 at 10.57.48 AM.jpeg" alt="" srcset="">
+            </div>
+            <div class="message-content">
+              <h2>Welcome!</h2>
+              <p>It looks like you haven't added your turf yet. Add your turf now to make your business online and reach more customers.</p>
+              <div class="message-btn">
+                <a class="add-turf-btn" onclick="scrollToSection('add-turf')">Add Your Turf <i class="ph ph-arrow-up-right"></i></a>
+                <a class="add-turf-btn" onclick="scrollToSection('faq')">Need Help <i class="ph ph-question"></i></a>
+              </div>
+            </div>
+        </div>
+        <div class="recent-turf-ticket">
+          <div class="nav-recent-turf-ticket">
+            <a href="" id="left-nav"><i class="icon ph-bold ph-arrow-arc-left"></i></a>
+            <a href="" id="right-nav"><i class="icon ph-bold ph-arrow-arc-right"></i></a>
+          </div>
+          <div class="recent-ticket-container">
+            <div class="recent-ticket-show">
+              <h3>Shahul Hameed S</h3>
+              <div class="turf-ticket-info">
+                <p><span>T ID</span> #123456</p>
+                <div class="turf-ticket-price">
+                  <p><span>Price</span> ₹500</p>
+                  <p><span>Date</span> 16-07-24</p>
+                </div>
+                <p><span>Time</span> 01:00 PM - 02:00 PM</p>
+              </div>
+            </div>  
+            <div class="recent-ticket-show">
+              <h3>Shahul Hameed S</h3>
+              <div class="turf-ticket-info">
+                <p><span>T ID</span> #123456</p>
+                <div class="turf-ticket-price">
+                  <p><span>Price</span> ₹500</p>
+                  <p><span>Date</span> 16-07-24</p>
+                </div>
+                <p><span>Time</span> 01:00 PM - 02:00 PM</p>
+              </div>
+            </div> 
+            <div class="recent-ticket-show">
+              <h3>Shahul Hameed S</h3>
+              <div class="turf-ticket-info">
+                <p><span>T ID</span> #123456</p>
+                <div class="turf-ticket-price">
+                  <p><span>Price</span> ₹500</p>
+                  <p><span>Date</span> 16-07-24</p>
+                </div>
+                <p><span>Time</span> 01:00 PM - 02:00 PM</p>
+              </div>
+            </div> 
+            <div class="recent-ticket-show">
+              <h3>Shahul Hameed S</h3>
+              <div class="turf-ticket-info">
+                <p><span>T ID</span> #123456</p>
+                <div class="turf-ticket-price">
+                  <p><span>Price</span> ₹500</p>
+                  <p><span>Date</span> 16-07-24</p>
+                </div>
+                <p><span>Time</span> 01:00 PM - 02:00 PM</p>
+              </div>
+            </div> 
+            <div class="recent-ticket-show">
+              <h3>Shahul Hameed S</h3>
+              <div class="turf-ticket-info">
+                <p><span>T ID</span> #123456</p>
+                <div class="turf-ticket-price">
+                  <p><span>Price</span> ₹500</p>
+                  <p><span>Date</span> 16-07-24</p>
+                </div>
+                <p><span>Time</span> 01:00 PM - 02:00 PM</p>
+              </div>
+            </div> 
+            <div class="recent-ticket-show">
+              <h3>Shahul Hameed S</h3>
+              <div class="turf-ticket-info">
+                <p><span>T ID</span> #123456</p>
+                <div class="turf-ticket-price">
+                  <p><span>Price</span> ₹500</p>
+                  <p><span>Date</span> 16-07-24</p>
+                </div>
+                <p><span>Time</span> 01:00 PM - 02:00 PM</p>
+              </div>
+            </div> 
+            <div class="recent-ticket-show">
+              <h3>Shahul Hameed S</h3>
+              <div class="turf-ticket-info">
+                <p><span>T ID</span> #123456</p>
+                <div class="turf-ticket-price">
+                  <p><span>Price</span> ₹500</p>
+                  <p><span>Date</span> 16-07-24</p>
+                </div>
+                <p><span>Time</span> 01:00 PM - 02:00 PM</p>
+              </div>
+            </div> 
+            <div class="recent-ticket-show">
+              <h3>Shahul Hameed S</h3>
+              <div class="turf-ticket-info">
+                <p><span>T ID</span> #123456</p>
+                <div class="turf-ticket-price">
+                  <p><span>Price</span> ₹500</p>
+                  <p><span>Date</span> 16-07-24</p>
+                </div>
+                <p><span>Time</span> 01:00 PM - 02:00 PM</p>
+              </div>
+            </div> 
+          </div>
+          
+        </div>  
+      </div>
+      <div class="section agenda">
+        <div id="slots-section">
+          <form id="slots-form">
+            <div class="input-group">
+              <label for="start-time">Start Time:</label>
+              <input type="time" id="start-time" name="start-time">
+            </div>
+            <div class="input-group">
+              <label for="end-time">End Time:</label>
+              <input type="time" id="end-time" name="end-time">
+            </div>
+            <button type="button" id="add-slot-btn">Add Another Slot</button>
+            
+          <button type="submit">Publish Slots</button>
+            
+          </form>
+          <div class="time-slot-container">
+            <span>Time</span>
+            <ul id="slots-list"></ul>
+          </div>
+       
+        </div>
+        
+      </div>
+      <div class="section faq" id="faq">
+        <section class="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-box">
+            <h3>General</h3>
+              <div class="faq-item">
+                  <h4>What is TurfPitch.in?</h4>
+                  <p>TurfPitch.in is an online platform that allows turf owners to list their turfs, making it easier for customers to find and book them.</p>
+              </div>
+          
+              <div class="faq-item">
+                  <h4>Why should I add my turf to TurfPitch.in?</h4>
+                  <p>Adding your turf to TurfPitch.in can increase your visibility, attract more customers, and simplify the booking and management process.</p>
+              </div>
+          
+              <div class="faq-item">
+                  <h4>How much does it cost to list my turf on TurfPitch.in?</h4>
+                  <p>The cost structure varies; please refer to our pricing page for detailed information.</p>
+              </div>
+          
+              <div class="faq-item">
+                  <h4>What are the benefits of listing my turf on TurfPitch.in?</h4>
+                  <p>Increased visibility, easy booking management, customer support, and promotional opportunities.</p>
+              </div>
+          </div>
+          <div class="faq-box">
+            <h3>Adding and Managing Turf</h3>
+              <div class="faq-item">
+                  <h4>How do I add my turf to TurfPitch.in?</h4>
+                  <p>Once logged in, navigate to the dashboard and click on "Add Turf." Follow the prompts to enter the details of your turf.</p>
+              </div>
+          
+              <div class="faq-item">
+                  <h4>What information do I need to provide about my turf?</h4>
+                  <p>Turf name, location, type of turf, size, availability, pricing, and any additional amenities or services offered.</p>
+              </div>
+          
+              <div class="faq-item">
+                  <h4>Can I add multiple turfs to my account?</h4>
+                  <p>Yes, you can add multiple turfs under a single account. Each turf will have its own listing and management options.</p>
+              </div>
+              <div class="faq-item">
+                  <h4>How do I upload photos of my turf?</h4>
+                  <p>During the turf addition process, you will have an option to upload photos. Ensure the images are clear and showcase your turf effectively.</p>
+              </div>
+              <div class="faq-item">
+                <h4>Can I edit the details of my turf after listing it?</h4>
+                <p>Yes, you can edit your turf details anytime from the dashboard.</p>
+              </div>
+              <div class="faq-item">
+                <h4>How do I set the availability and pricing for my turf?</h4>
+                <p>In the turf details section, you can set the available time slots and corresponding prices.</p>
+              </div>
+          </div>
+          <div class="faq-box">
+            <h3>Booking and Payments</h3>
+              <div class="faq-item">
+                  <h4>How do customers book my turf?</h4>
+                  <p>Customers can search for turfs, view your listing, and book available time slots directly through TurfPitch.in.</p>
+              </div>
+          
+              <div class="faq-item">
+                  <h4>How will I be notified of new bookings?</h4>
+                  <p>You will receive email notifications for each new booking. You can also view bookings in your dashboard.</p>
+              </div>
+          
+              <div class="faq-item">
+                  <h4>How do I manage cancellations and rescheduling?</h4>
+                  <p>From your dashboard, you can manage bookings, including handling cancellations and rescheduling requests.</p>
+              </div>
+              <div class="faq-item">
+                  <h4>How and when will I receive payments?</h4>
+                  <p>Payments are processed through our platform and transferred to your account according to our payment schedule. Please refer to our payment policy for more details.</p>
+              </div>
+          </div>
+          <div class="faq-box">
+            <h3>Support and Troubleshooting</h3>
+              <div class="faq-item">
+                  <h4>What should I do if I encounter technical issues?</h4>
+                  <p>Contact our support team through the "Help" section on the website or email us at support@turfpitch.in.</p>
+              </div>
+          
+              <div class="faq-item">
+                  <h4>How do I contact customer support?</h4>
+                  <p>You can reach our customer support via email, phone, or live chat available on the website.</p>
+              </div>
+          
+              <div class="faq-item">
+                  <h4>What if I forget my password?</h4>
+                  <p>Click on the "Forgot Password" link on the login page and follow the instructions to reset your password.</p>
+              </div>
+          </div>
+          <div class="faq-box">
+            <h3>Miscellaneous</h3>
+              <div class="faq-item">
+                  <h4>Can I promote special offers or discounts?</h4>
+                  <p>Yes, you can create and promote special offers or discounts through your dashboard.</p>
+              </div>
+          
+              <div class="faq-item">
+                  <h4>How do I get more bookings for my turf?</h4>
+                  <p>Ensure your listing is complete and attractive, use high-quality images, and consider promoting your turf through our advertising options.</p>
+              </div>
+          
+              <div class="faq-item">
+                  <h4>What measures are in place for customer safety and satisfaction?</h4>
+                  <p>We encourage turf owners to maintain high standards of cleanliness and safety. Customer reviews and ratings also help maintain quality.</p>
+              </div>
+            </div>
+          </section>
+          <div class="faq-terms-conditions">
+            <a href="#">Terms & Conditions <i class="icon ph-bold ph-arrow-up-right"></i></a>
+            <a href="#">Privacy Policy <i class="icon ph-bold ph-arrow-up-right"></i></a>
+            <a href="#">Cancellation Policy <i class="icon ph-bold ph-arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="section add-turf" id="add-turf">
+          <div class="addturf-container">
+            <ul class="progressbar">
+                <li class="active">Step 1</li>
+                <li>Step 2</li>
+                <li>Step 3</li>
+            </ul>
+            <form id="turfForm">
+                <fieldset class="active">
+                    <h2>Basic Information</h2>
+                    <div class="turf-inputarea">
+                      <div class="input-field">
+                        <label for="turfName">Turf Name:</label>
+                        <input type="text" id="turfName" name="turfName" required>
+                      </div>
+                      <div class="input-field">
+                        <label for="turfOwnName">Owner Name:</label>
+                        <input type="text" id="turfOwnName" name="turfOwnName" required>
+                      </div>
+                      <div class="input-field">
+                        <label for="contact">Contact Number:</label>
+                        <input type="text" id="contact" name="contact" required>
+                      </div>
+                    </div>
+                    <div class="turf-inputarea">
+                      <div class="input-field">
+                        <label for="place">Place:</label>
+                        <input type="text" id="place" name="place" required>
+                      </div> 
+                      <div class="input-field">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" required>
+                      </div> 
+                      <div class="input-field">
+                        <label for="state">State:</label>
+                        <input type="text" id="state" name="state" required>
+                      </div> 
+                    </div>
+                      <div class="form-actions">
+                        <button type="button" class="next">Next</button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <h2>Turf Details</h2>
+                    <div class="turf-inputarea">
+                      <div class="input-field">
+                        <label for="about">About:</label>
+                        <textarea name="about" id="about" rows="3" placeholder="Eg:- Not compulsory to wear shoes, Always bring kits, Stumps will be provided"></textarea>
+                      </div> 
+                      <div class="input-field">
+                        <label for="type">Turf Type:</label>
+                        <input list="types" id="type-input" placeholder="Enter type">
+                        <div class="tag-container" id="type-tags"><span class="example-text">Eg: Cricket, Football</span></div>
+                        <input type="hidden" id="type" name="type" required>
+                      </div>
+                      <div class="input-field">
+                        <label for="comfort">Turf Comforts:</label>
+                        <input list="comforts" id="type-comfort" placeholder="Enter Comforts">
+                        <div class="tag-container-comfort" id="type-tags-comfort"><span class="example-text-comfort">Eg: Restroom, Parking</span></div>
+                        <input type="hidden" id="comfort" name="comfort" required>
+                      </div> 
+                    </div>
+                    <div class="turf-inputarea">
+                      <div class="input-field">
+                        <label for="address">Address:</label>
+                        <textarea name="address" id="about" rows="3"></textarea>
+                      </div> 
+                      <div class="input-field">
+                        <label for="price">Price per hour:</label>
+                        <input type="text" id="price" name="price" required>
+                      </div> 
+                      <div class="input-field">
+                        <label for="profile">Profile Image:</label>
+                        <input type="file" id="profile" name="profile" required>
+                      </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="previous">Previous</button>
+                        <button type="button" class="next">Next</button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <h2>Step 3: Images and Map</h2>
+                    <div class="turf-inputarea">
+                      <div class="input-field">
+                        <label for="thumbnail">Thumbnail Image:</label>
+                        <input type="file" id="thumbnail" name="thumbnail" required>
+                      </div>
+                      <div class="input-field">
+                        <label for="image">Additional Images:</label>
+                        <input type="file" id="image" name="image" multiple required>
+                        <span>(Upload upto 4 Images)</span>
+                      </div>
+                      <div class="input-field">
+                        <label for="map">Map Link:</label>
+                        <input type="url" id="map" name="map" required>
+                        <a href="#" target="_blank">Know how to get map link?</a>
+                      </div>
+                    </div>  
+                    <div class="form-actions">
+                        <button type="button" class="previous">Previous</button>
+                        <button type="submit">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="section turf-profile">
+          <div class="profile-thumb">
+            <img src="../assets/Screenshot-2022-02-18-134909.png" alt="">
+            <div class="profile-area">
+              <img src="../assets/WhatsApp Image 2024-07-10 at 10.57.48 AM.jpeg" alt="">
+              <div class="profile-area-user">
+                <h3>Name</h3>
+                <div class="profile-area-userinfo">
+                  <p>Turf Name</p>
+                  <p><i class="icon ph-bold ph-map-pin-line"></i>Location</p>
+                  <p><i class="icon ph-bold ph-currency-inr"></i>500/Hr</p>
+                  <a href=""><button><i class="icon ph-bold ph-pencil-simple"></i>Edit</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-turf-info">
+              <div class="profile-content">
+                <p>Number</p>
+                <span>1234567890</span>
+              </div>
+              <div class="profile-content">
+                <p>Email</p>
+                <span>test@gmail.com</span>
+              </div>
+              <div class="profile-content">
+                <p>Address</p>
+                <span>#68, 9th Cross Kuppuswamy Layout, Nagavara. AC Post. Bangalore - 560045.</span>
+              </div>
+              <div class="profile-content">
+                <p>Place</p>
+                <span>Place</span>
+              </div>
+              <div class="profile-content">
+                <p>Location</p>
+                <span>Bangalore</span>
+              </div>
+              <div class="profile-content">
+                <p>State</p>
+                <span>Karnataka</span>
+              </div>
+              <div class="profile-content">
+                <p>About</p>
+                <span>Not compulsory to wear shoes
+
+                  Always bring kits
+                  
+                  Stumps will be provided</span>
+              </div>
+              <div class="profile-content">
+                <p>Type</p>
+                <span>Cricket, Badminton, Football</span>
+              </div>
+              <div class="profile-content">
+                <p>Comforts</p>
+                <span>Restroom, Parking, Drinking water, Shower</span>
+              </div>
+              <div class="profile-content">
+                <p>Map Link</p>
+                <span>http://127.0.0.1:5501/turf_data.html</span>
+              </div>
+           
+          </div>
+          <button id="see-more-btn">See More <i class="icon ph-bold ph-caret-double-down"></i></button>
+          <div id="additional-info" class="hidden">        
+            <div class="profile-turf-images">
+              <div class="profile-turf-thumb">
+                <img src="../assets/Screenshot-2022-02-18-134909.png" alt="">
+                <p>Thumbnail</p>
+              </div>
+              <div class="profile-turf-gallery">
+                <div class="turf-gallery-images">
+                  <img src="../assets/Screenshot-2022-02-18-134909.png" alt="">
+                  <img src="../assets/Screenshot-2022-02-18-134909.png" alt="">
+                  <img src="../assets/Screenshot-2022-02-18-134909.png" alt="">
+                  <img src="../assets/Screenshot-2022-02-18-134909.png" alt="">
+                </div>
+                <p>Slide Images</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section turf-bookings">
+          <div class="turf-current-booking">
+            <div class="turf-current-info">
+              <h3>Today's Booking</h3>
+              <table>
+                <thead>
+                 <tr>
+                  <th>T ID</th>
+                  <th>profile</th>
+                  <th>Name</th>
+                  <th>date slot</th>
+                  <th>time slot</th>
+                  <th>price</th>
+                  <th>view</th>
+                  <th>action</th>
+                 </tr>
+                </thead>
+                <tbody>
+                  <tr class="current-booking">
+                    <td>#00504</td>
+                    <td><img src="../assets/WhatsApp Image 2024-07-10 at 10.57.48 AM.jpeg" alt=""></td>
+                    <td>Shahul Hameed S</td>
+                    <td>16-07-24</td>
+                    <td>01:00 PM - 02:00 PM</td>
+                    <td>500</td>
+                    <td><a href="" class="view-link">View</a></td>
+                    <td>
+                      <a href="#" class="icon-link"><i class="icon ph-bold ph-dots-three-outline-vertical"></i></a>
+                      <div class="turf-booking-res-del" id="turf-booking-res-del">
+                        <a href=""><i class="icon ph-bold ph-trash"></i>Delete</a>
+                        <a href=""><i class="icon ph-bold ph-calendar-check"></i>Reschedule</a>
+                      </div>
+                    </td>
+                  </tr>  
+                  <tr>
+                    <td>#00504</td>
+                    <td><img src="../assets/WhatsApp Image 2024-07-10 at 10.57.48 AM.jpeg" alt=""></td>
+                    <td>Vinay G prakash</td>
+                    <td>16-07-24</td>
+                    <td>02:00 PM - 02:30 PM</td>
+                    <td>750</td>
+                    <td><a href="" class="view-link">View</a></td>
+                    <td>
+                      <a href="#" class="icon-link"><i class="icon ph-bold ph-dots-three-outline-vertical"></i></a>
+                      <div class="turf-booking-res-del" id="turf-booking-res-del">
+                        <a href=""><i class="icon ph-bold ph-trash"></i>Delete</a>
+                        <a href=""><i class="icon ph-bold ph-calendar-check"></i>Reschedule</a>
+                      </div>
+                    </td>
+                  </tr> 
+                </tbody>                
+              </table>
+              </div>
+            </div>
+            <div class="turf-current-booking">
+              <div class="turf-current-info">
+                <h3>Upcoming</h3>
+                <table id="booking-table">
+                  <thead>
+                   <tr>
+                    <th>T ID</th>
+                    <th>profile</th>
+                    <th>Name</th>
+                    <th>date slot</th>
+                    <th>time slot</th>
+                    <th>price</th>
+                    <th>view</th>
+                    <th>action</th>
+                   </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#00504</td>
+                      <td><img src="../assets/WhatsApp Image 2024-07-10 at 10.57.48 AM.jpeg" alt=""></td>
+                      <td>Shahul Hameed S</td>
+                      <td>16-07-24</td>
+                      <td>01:00 PM - 02:00 PM</td>
+                      <td>500</td>
+                      <td><a href="" class="view-link">View</a></td>
+                      <td>
+                        <a href="#" class="icon-link"><i class="icon ph-bold ph-dots-three-outline-vertical"></i></a>
+                        <div class="turf-booking-res-del" id="turf-booking-res-del">
+                          <a href=""><i class="icon ph-bold ph-trash"></i>Delete</a>
+                          <a href=""><i class="icon ph-bold ph-calendar-check"></i>Reschedule</a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#00504</td>
+                      <td><img src="../assets/WhatsApp Image 2024-07-10 at 10.57.48 AM.jpeg" alt=""></td>
+                      <td>Vinay G prakash</td>
+                      <td>16-07-24</td>
+                      <td>02:00 PM - 02:30 PM</td>
+                      <td>750</td>
+                      <td><a href="" class="view-link">View</a></td>
+                      <td>
+                        <a href="#" class="icon-link"><i class="icon ph-bold ph-dots-three-outline-vertical"></i></a>
+                        <div class="turf-booking-res-del" id="turf-booking-res-del">
+                          <a href=""><i class="icon ph-bold ph-trash"></i>Delete</a>
+                          <a href=""><i class="icon ph-bold ph-calendar-check"></i>Reschedule</a>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>#00504</td>
+                      <td><img src="../assets/WhatsApp Image 2024-07-10 at 10.57.48 AM.jpeg" alt=""></td>
+                      <td>Vinay G prakash</td>
+                      <td>16-07-24</td>
+                      <td>02:00 PM - 02:30 PM</td>
+                      <td>750</td>
+                      <td><a href="" class="view-link">View</a></td>
+                      <td>
+                        <a href="#" class="icon-link"><i class="icon ph-bold ph-dots-three-outline-vertical"></i></a>
+                        <div class="turf-booking-res-del" id="turf-booking-res-del">
+                          <a href=""><i class="icon ph-bold ph-trash"></i>Delete</a>
+                          <a href=""><i class="icon ph-bold ph-calendar-check"></i>Reschedule</a>
+                        </div>
+                      </td>
+                    </tr> 
+                    <tr>
+                      <td>#00504</td>
+                      <td><img src="../assets/WhatsApp Image 2024-07-10 at 10.57.48 AM.jpeg" alt=""></td>
+                      <td>Vinay G prakash</td>
+                      <td>16-07-24</td>
+                      <td>02:00 PM - 02:30 PM</td>
+                      <td>750</td>
+                      <td><a href="" class="view-link">View</a></td>
+                      <td>
+                        <a href="#" class="icon-link"><i class="icon ph-bold ph-dots-three-outline-vertical"></i></a>
+                        <div class="turf-booking-res-del" id="turf-booking-res-del">
+                          <a href=""><i class="icon ph-bold ph-trash"></i>Delete</a>
+                          <a href=""><i class="icon ph-bold ph-calendar-check"></i>Reschedule</a>
+                        </div>
+                      </td>
+                    </tr> 
+                    <tr>
+                      <td>#00504</td>
+                      <td><img src="../assets/WhatsApp Image 2024-07-10 at 10.57.48 AM.jpeg" alt=""></td>
+                      <td>Vinay G prakash</td>
+                      <td>16-07-24</td>
+                      <td>02:00 PM - 02:30 PM</td>
+                      <td>750</td>
+                      <td><a href="" class="view-link">View</a></td>
+                      <td>
+                        <a href="#" class="icon-link"><i class="icon ph-bold ph-dots-three-outline-vertical"></i></a>
+                        <div class="turf-booking-res-del" id="turf-booking-res-del">
+                          <a href=""><i class="icon ph-bold ph-trash"></i>Delete</a>
+                          <a href=""><i class="icon ph-bold ph-calendar-check"></i>Reschedule</a>
+                        </div>
+                      </td>
+                    </tr> 
+                  </tbody>                
+                </table>
+                <div class="pagination" id="pagination">
+                  <button id="prevBtn" onclick="prevPage()"><i class="fa-solid fa-arrow-left-long"></i> Previous</button>
+                  <div id="pageButtons"></div>
+                  <button id="nextBtn" onclick="nextPage()">Next <i class="fa-solid fa-arrow-right-long"></i>
+                  </button>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="turf-ticket" id="turf-ticket-show">
+            <div class="turf-ticket-show" id="ticket-show">
+              <h3>Shahul Hameed S</h3>
+              <div class="turf-ticket-info" id="ticket-info">
+                <p><span>T ID</span> #123456</p>
+                <div class="turf-ticket-price">
+                  <p><span>Price</span> ₹500</p>
+                  <p><span>Date</span> 16-07-24</p>
+                </div>
+                <p><span>Time</span> 01:00 PM - 02:00 PM</p>
+                <p><span>Transaction ID</span> ABC123XYZ</p>
+                <p><span>Venue</span> Cricket - Kothanur Turf Stadium</p>
+                <p><span>Phone</span> +1 234 567 8901</p>
+                <div class="turf-ticket-share">
+                  <a href=""><i class="icon ph-bold ph-cloud-arrow-down"></i></a>
+                  <a href=""><i class="ph ph-share-network"></i></a>
+                </div>
+                <a href="" class="close-ticket"><i class="icon ph-bold ph-x-circle"></i></a>
+              </div>
+            </div>                      
+          </div>
+          
+        </div>
+    </div>
+  </div>
+  <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+          const inputField = document.getElementById('type-input');
+          const tagContainer = document.getElementById('type-tags');
+          const hiddenInput = document.getElementById('type');
+          const exampleText = document.querySelector('.example-text');
+  
+          inputField.addEventListener('keypress', function (e) {
+              if (e.key === 'Enter') {
+                  e.preventDefault();
+                  addTag(inputField.value);
+                  inputField.value = '';
+              }
+          });
+  
+          function addTag(value) {
+              if (value.trim() === '') return;
+  
+              const tag = document.createElement('div');
+              tag.classList.add('tag');
+              tag.innerHTML = value + '<span>&times;</span>';
+  
+              tag.querySelector('span').addEventListener('click', function () {
+                  tagContainer.removeChild(tag);
+                  updateHiddenInput();
+                  checkExampleText();
+              });
+  
+              tagContainer.appendChild(tag);
+              updateHiddenInput();
+              checkExampleText();
+          }
+  
+          function updateHiddenInput() {
+              const tags = tagContainer.querySelectorAll('.tag');
+              const values = [];
+              tags.forEach(tag => values.push(tag.textContent.slice(0, -1)));
+              hiddenInput.value = values.join(', ');
+          }
+  
+          function checkExampleText() {
+              const tags = tagContainer.querySelectorAll('.tag');
+              if (tags.length > 0) {
+                  exampleText.style.display = 'none';
+              } else {
+                  exampleText.style.display = 'inline';
+              }
+          }
+      });
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const inputField1 = document.getElementById('type-comfort');
+        const tagContainer1 = document.getElementById('type-tags-comfort');
+        const hiddenInput1 = document.getElementById('comfort');
+        const exampleText1 = document.querySelector('.example-text-comfort');
+
+        inputField1.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                addTag(inputField1.value);
+                inputField1.value = '';
+            }
+        });
+
+        function addTag(value) {
+            if (value.trim() === '') return;
+
+            const tag = document.createElement('div');
+            tag.classList.add('tag');
+            tag.innerHTML = value + '<span>&times;</span>';
+
+            tag.querySelector('span').addEventListener('click', function () {
+                tagContainer1.removeChild(tag);
+                updateHiddenInput1();
+                checkExampleText1();
+            });
+
+            tagContainer1.appendChild(tag);
+            updateHiddenInput1();
+            checkExampleText1();
+        }
+
+        function updateHiddenInput1() {
+            const tags = tagContainer1.querySelectorAll('.tag');
+            const values = [];
+            tags.forEach(tag => values.push(tag.textContent.slice(0, -1)));
+            hiddenInput1.value = values.join(', ');
+        }
+
+        function checkExampleText1() {
+            const tags = tagContainer1.querySelectorAll('.tag');
+            if (tags.length > 0) {
+                exampleText1.style.display = 'none';
+            } else {
+                exampleText1.style.display = 'inline';
+            }
+        }
+    });
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var current_fs, next_fs, previous_fs; // Fieldsets
+            var animating; // Flag to prevent quick multi-click glitches
+            
+            function showNextStep() {
+                if (animating) return false;
+                animating = true;
+                
+                current_fs = $(this).parent().parent();
+                next_fs = $(this).parent().parent().next();
+                
+                // Add class active to next step
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+                
+                // Show the next fieldset
+                next_fs.addClass('active');
+                current_fs.removeClass('active');
+                animating = false;
+            }
+            
+            function showPreviousStep() {
+                if (animating) return false;
+                animating = true;
+                
+                current_fs = $(this).parent().parent();
+                previous_fs = $(this).parent().parent().prev();
+                
+                // Remove class active from current step
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+                
+                // Show the previous fieldset
+                previous_fs.addClass('active');
+                current_fs.removeClass('active');
+                animating = false;
+            }
+            
+            $(".next").click(showNextStep);
+            $(".previous").click(showPreviousStep);
+            
+            $("#turfForm").submit(function(e) {
+                e.preventDefault();
+                alert("Form submitted successfully!");
+            });
+        });
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js" integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw==" crossorigin="anonymous"></script>
+  <script src="./script.js">
+    
+  </script>
+</body>
+</html>
